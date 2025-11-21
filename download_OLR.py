@@ -81,7 +81,6 @@ for y, year in enumerate(years):
     # per https://confluence.ecmwf.int/pages/viewpage.action?pageId=82870405#heading-Meanratesfluxesandaccumulations
     ds["VAR_OLR"] = -ds["ttr"] / 3600  # https://codes.ecmwf.int/grib/param-db/179
     ds = ds["VAR_OLR"]  # remove all other variables
-    breakpoint()
     if config["daily_mean"]:
         ds = ds.resample(valid_time="1D").mean()  # compute daily means
         save_path = data_dir / f"{year}_daily_mean.nc"
