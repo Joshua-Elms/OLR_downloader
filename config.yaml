@@ -1,0 +1,4 @@
+start_date: "2000-01"
+end_date: "2000-02"
+timestep_in_hours: 3
+daily_mean: True
